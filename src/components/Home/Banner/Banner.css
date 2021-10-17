@@ -1,0 +1,12 @@
+.hero-title {
+  color: black;
+}
+.banner img {
+  height: 500px;
+}
+
+@media only screen and (max-width: 668px) {
+  .banner img {
+    height: auto;
+  }
+}
