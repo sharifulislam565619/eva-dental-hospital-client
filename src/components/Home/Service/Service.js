@@ -7,13 +7,15 @@ const Service = (props) => {
     return (
         <Col xl={3} lg={3} md={6} sm={12}>
             <CardGroup>
-                <Card>
+                <Card >
+
                     <Card.Img variant="top" src={img} />
+
                     <Card.Body>
-                        <Card.Title><h6>{service}</h6></Card.Title>
-                        <Card.Title>{fee}</Card.Title>
+                        <Card.Title><h6><strong>{service}</strong></h6></Card.Title>
+                        <Card.Title><h5>{fee}</h5></Card.Title>
                         <Card.Text>
-                            <small> {desc.slice(0, 60)}...</small>
+                            <small> {desc.slice(0, 55)}...</small>
                         </Card.Text>
                     </Card.Body>
                     <Link to={`/services/${id}`}><button className="btn btn-primary">Details</button></Link>
