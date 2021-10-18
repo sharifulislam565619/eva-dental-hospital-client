@@ -40,9 +40,9 @@ const Register = () => {
 
                 <form onSubmit={handleRegister}>
 
-                    <input onBlur={handleEmail} type="email" placeholder="Enter your email" />
+                    <input onBlur={handleEmail} type="email" required placeholder="Enter your email" />
                     <br />
-                    <input onBlur={handlePassword} type="password" placeholder="Enter password" /><br />
+                    <input onBlur={handlePassword} type="password" required placeholder="Enter password" /><br />
                     <input className="register-btn" type="submit" value="Register" /><br />
                 </form>
                 <span>I have an account <Link to="/login">Login</Link></span><br />

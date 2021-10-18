@@ -11,15 +11,17 @@ import './Login.css';
 
 
 const Login = () => {
-    const { signInWithEmailPassword, handleGoogleSignIn, error, handleFacebookSignIn } = useAuth()
+    const { resetPassword, signInWithEmailPassword, handleGoogleSignIn, error, handleFacebookSignIn } = useAuth()
     const [email, setEmail] = useState([])
     const [password, setPassword] = useState([])
+    const [error2, setError2] = useState()
 
 
 
     const history = useHistory()
     const location = useLocation()
     const url = location?.state?.from
+
 
     const handleEmail = (e) => {
         setEmail(e.target.value)
@@ -28,22 +30,12 @@ const Login = () => {
         setPassword(e.target.value)
     }
 
-    const handleSignInEmailPassword = () => {
+    const handleSignInEmailPassword = (e) => {
+        e.preventDefault()
 
-        // e.preventDefault()
         signInWithEmailPassword(email, password)
-            .then((userCredential) => {
-                // Signed in 
-                const user = userCredential.user;
-                //setUser(user)
-            })
-            .catch((error) => {
 
 
-                // setError("Enter your valid email password")
-            });
-
-        history.push(url)
 
 
 
@@ -57,7 +49,7 @@ const Login = () => {
                 history.push(url)
 
             }).catch((error) => {
-
+                setError2(error.message)
 
             });
     }
@@ -69,12 +61,23 @@ const Login = () => {
 
             })
             .catch((error) => {
-
+                setError2(error.message)
 
 
             });
     }
 
+
+    const handleResetPassword = () => {
+        resetPassword(email)
+            .then(() => {
+                alert("You can rest your password. check your email")
+            })
+            .catch((error) => {
+
+                setError2(error.message)
+            });
+    }
 
     return (
         <div className="login-form">
@@ -82,15 +85,18 @@ const Login = () => {
             <div className="my-cart">
                 <h2>Please login</h2>
                 <p className="text-danger">{error}</p>
+                <p className="text-danger">{error2}</p>
 
                 <form onSubmit={handleSignInEmailPassword} action="">
 
-                    <input onChange={handleEmail} type="email" placeholder="Enter your email" />
+                    <input onChange={handleEmail} type="email" required placeholder="Enter your email" />
                     <br />
-                    <input onChange={handlePassword} type="password" placeholder="Enter password" /><br />
+                    <input onChange={handlePassword} type="password" required placeholder="Enter password" /><br />
                     <input className="login-btn" type="submit" value="Login" /><br />
+
                 </form>
-                <Link to="/">Forgot password</Link><br />
+                <Link onClick={handleResetPassword} to="/login">Forgot password</Link>
+                <br />
                 <div className="mb-2">
                     <span >Create a new account <Link to="/register">Register</Link></span>
                 </div><br />
