@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
+import Contact from './components/Home/Contact/Contact';
 import Home from './components/Home/Home/Home';
 import Login from './components/Home/Login/Login';
 import NotFound from './components/Home/NotFound/NotFound';
@@ -32,6 +33,9 @@ function App() {
             </Route>
             <Route path="/register">
               <Register></Register>
+            </Route>
+            <Route path="/contact">
+              <Contact></Contact>
             </Route>
             <Route exact path="*">
               <NotFound></NotFound>

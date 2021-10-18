@@ -9,13 +9,15 @@ import './Header.css';
 const Header = () => {
     const { user, logOut } = useAuth()
     return (
+
         <>
-            <Navbar className="py-0 " collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
-                <Container>
+            <Navbar className="py-0" bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg">
+                <Container >
                     <Nav.Link as={HashLink} to="/home#home"><img style={{ width: '100px', height: "50px", borderRadius: "10px" }} src={logo} alt="" /></Nav.Link>
 
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end my-navbar">
+
                         <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
                         <Nav.Link as={HashLink} offset={-150} to="/home#services">Services</Nav.Link>
                         <Nav.Link as={HashLink} to="/home#about">About us</Nav.Link>
@@ -31,7 +33,7 @@ const Header = () => {
                                     <button className="btn btn-primary"><i className="fas fa-sign-in-alt text-info me-1"></i>Login</button>
                                 </Nav.Link>}
 
-                    </Navbar.Collapse>-
+                    </Navbar.Collapse>
 
                 </Container>
             </Navbar>

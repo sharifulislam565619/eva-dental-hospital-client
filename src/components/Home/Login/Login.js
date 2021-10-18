@@ -12,8 +12,9 @@ import './Login.css';
 
 const Login = () => {
     const { signInWithEmailPassword, handleGoogleSignIn, error, handleFacebookSignIn } = useAuth()
-    const [email, setEmail] = useState()
-    const [password, setPassword] = useState()
+    const [email, setEmail] = useState([])
+    const [password, setPassword] = useState([])
+
 
 
     const history = useHistory()
@@ -29,7 +30,20 @@ const Login = () => {
 
     const handleSignInEmailPassword = () => {
 
+        // e.preventDefault()
         signInWithEmailPassword(email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                //setUser(user)
+            })
+            .catch((error) => {
+
+
+                // setError("Enter your valid email password")
+            });
+
+        history.push(url)
 
 
 
@@ -69,7 +83,7 @@ const Login = () => {
                 <h2>Please login</h2>
                 <p className="text-danger">{error}</p>
 
-                <form onSubmit={handleSignInEmailPassword}>
+                <form onSubmit={handleSignInEmailPassword} action="">
 
                     <input onChange={handleEmail} type="email" placeholder="Enter your email" />
                     <br />
