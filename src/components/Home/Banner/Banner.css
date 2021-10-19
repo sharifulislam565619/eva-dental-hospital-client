@@ -10,3 +10,8 @@
     height: auto;
   }
 }
+
+.banner h1 {
+  font-weight: bolder;
+  font-size: 60px;
+}

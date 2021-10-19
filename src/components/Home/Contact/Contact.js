@@ -16,6 +16,7 @@ const Contact = () => {
                 <br />
                 <div className="text-start w-50 mx-auto"> <button className="btn btn-outline-dark text-start">Submit</button></div>
             </form>
+
         </div>
     );
 };

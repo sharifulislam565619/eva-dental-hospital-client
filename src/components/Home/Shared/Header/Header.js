@@ -22,7 +22,7 @@ const Header = () => {
                         <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
                         <Nav.Link as={HashLink} offset={-150} to="/home#services">Services</Nav.Link>
                         <Nav.Link as={HashLink} to="/home#about">About us</Nav.Link>
-                        <Nav.Link as={HashLink} to="/home#contact">Contact us</Nav.Link>
+                        <Nav.Link as={HashLink} to="/contact">Contact us</Nav.Link>
 
                         {
                             user?.displayName || user?.email ?
