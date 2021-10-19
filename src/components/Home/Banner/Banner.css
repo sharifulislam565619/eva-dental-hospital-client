@@ -11,7 +11,21 @@
   }
 }
 
-.banner h1 {
+.banner span {
   font-weight: bolder;
-  font-size: 60px;
+  font-size: 50px;
+  color: #030662;
+}
+.banner h4 {
+  font-style: italic;
+  color: #040b68;
+}
+.banner p {
+  color: rgb(2, 148, 2);
+}
+
+@media only screen and (max-width: 668px) {
+  .banner span {
+    font-size: 30px;
+  }
 }

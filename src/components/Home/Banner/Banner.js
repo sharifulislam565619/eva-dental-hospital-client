@@ -1,11 +1,14 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import Typewriter from 'typewriter-effect';
 import banner1 from '../../../images/banner1.jpg';
 import banner2 from '../../../images/banner2.jpg';
 import banner3 from '../../../images/banner3.jpg';
 import './Banner.css';
 
+
 const Banner = () => {
+
     return (
         <Carousel id="home" className="banner">
             <Carousel.Item>
@@ -15,9 +18,25 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption className="hero-title">
-                    <h1>Eva Dental Hospital </h1>
-                    <h4>Smile opens your heart</h4>
-                    <p>Your health and comfort are our top priorities</p>
+                    <div className="d-flex mb-md-5 pb-md-5">
+                        <div className="col-md-5"></div>
+                        <div className="col-md-7">
+
+                            <Typewriter
+                                options={{
+                                    strings: ['Eva Dental Hospital'],
+                                    autoStart: true,
+                                    loop: true,
+                                }}
+                            />
+
+
+                            <h4>Smile opens your heart</h4>
+                            <p>Your health and comfort are our top priorities</p>
+                        </div>
+                    </div>
+
+
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -28,9 +47,22 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption className="hero-title">
-                    <h1>Eva Dental Hospital </h1>
-                    <h4>Smile opens your heart</h4>
-                    <p>Your health and comfort are our top priorities</p>
+                    <div className="d-flex mb-md-5 pb-md-5">
+                        <div className="col-md-5"></div>
+                        <div className="col-md-7">
+
+                            <Typewriter
+                                options={{
+                                    strings: ['Eva Dental Hospital'],
+                                    autoStart: true,
+                                    loop: true,
+                                }}
+                            />
+
+                            <h4>Smile opens your heart</h4>
+                            <p>Your health and comfort are our top priorities</p>
+                        </div>
+                    </div>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -41,9 +73,22 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption className="hero-title">
-                    <h1>Eva Dental Hospital </h1>
-                    <h4>Smile opens your heart</h4>
-                    <p>Your health and comfort are our top priorities</p>
+                    <div className="d-flex mb-md-5 pb-md-5">
+                        <div className="col-md-5"></div>
+                        <div className="col-md-7">
+
+                            <Typewriter
+                                options={{
+                                    strings: ['Eva Dental Hospital'],
+                                    autoStart: true,
+                                    loop: true,
+
+                                }}
+                            />
+                            <h4>Smile opens your heart</h4>
+                            <p>Your health and comfort are our top priorities</p>
+                        </div>
+                    </div>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
