@@ -32,12 +32,12 @@ input:focus {
 .login-btn {
   width: 100px;
   font-size: 24px;
-  background: linear-gradient(90deg, rgb(139, 16, 16), rgb(16, 16, 121));
+  background: linear-gradient(90deg, rgb(16, 16, 121), rgb(139, 16, 16));
   cursor: pointer;
   color: white;
 }
 .login-btn:hover {
-  background: rgb(0, 0, 0);
+  background: linear-gradient(90deg, red, blue);
   color: white;
 }
 
