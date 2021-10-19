@@ -7,9 +7,9 @@ const Service = (props) => {
     return (
         <Col xl={3} lg={3} md={6} sm={12}>
             <CardGroup>
-                <Card >
+                <Card className="py-2">
 
-                    <Card.Img variant="top" src={img} />
+                    <Card.Img variant="top" className="w-75 mx-auto" src={img} />
 
                     <Card.Body>
                         <Card.Title><h6><strong>{service}</strong></h6></Card.Title>

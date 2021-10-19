@@ -11,7 +11,12 @@ const Register = () => {
 
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
+    const [name, setName] = useState()
 
+
+    const handleName = (e) => {
+        setName(e.target.value)
+    }
 
     const handleEmail = (e) => {
         setEmail(e.target.value)
@@ -27,22 +32,24 @@ const Register = () => {
 
     const handleRegister = (e) => {
         e.preventDefault()
-        registerWithEmailPassword(email, password)
+        registerWithEmailPassword(email, password, name)
 
     }
 
     return (
         <div className="register-form py-4">
 
-            <div className="my-cart">
+            <div className="my-cart fs-6">
                 <h2>Please Register</h2>
                 <p className="text-danger">{error}</p>
 
                 <form onSubmit={handleRegister}>
 
-                    <input onBlur={handleEmail} type="email" required placeholder="Enter your email" />
+                    <input onBlur={handleName} type="text" required placeholder="Enter Your Name" />
                     <br />
-                    <input onBlur={handlePassword} type="password" required placeholder="Enter password" /><br />
+                    <input onBlur={handleEmail} type="email" required placeholder="Enter Your Email" />
+                    <br />
+                    <input onBlur={handlePassword} type="password" required placeholder="Enter Password" /><br />
                     <input className="register-btn" type="submit" value="Register" /><br />
                 </form>
                 <span>I have an account <Link to="/login">Login</Link></span><br />

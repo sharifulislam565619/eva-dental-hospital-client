@@ -2,7 +2,7 @@
 
 ## live link= https://dental-hospital-ad560.web.app/
 
-## About the our Hospital
+## About our Hospital
 
 - We make getting a dental implant the best experience possible.
 - Our general dentists don’t make a commission on procedures. So they only recommend the care you need.

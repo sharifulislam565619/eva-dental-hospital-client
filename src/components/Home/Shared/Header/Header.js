@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../../../hooks/useAuth';
 import logo from '../../../../images/logo.jpg';
+import userUrl from '../../../../images/userPhoto.png';
 import './Header.css';
 
 const Header = () => {
@@ -25,8 +26,10 @@ const Header = () => {
 
                         {
                             user?.displayName || user?.email ?
-                                <div>  <small className="text-white"> Signed in as: <i className="text-primary">{user?.displayName}</i></small> <button className="btn btn-danger" onClick={logOut}>
-                                    <i className="fas fa-sign-out-alt text-info me-1"></i>Logout</button></div>
+                                <div>  <small className="text-white"> Signed in as: <i className="text-primary">{user?.displayName}</i></small>
+                                    <img className="userPhoto" src={user.photoURL || userUrl} alt='' />
+                                    <button className="btn btn-danger" onClick={logOut}>
+                                        <i className="fas fa-sign-out-alt text-info me-1"></i>Logout</button></div>
                                 :
 
                                 <Nav.Link as={Link} to="/login">

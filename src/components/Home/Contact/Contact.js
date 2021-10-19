@@ -10,7 +10,7 @@ const Contact = () => {
                 <input className="w-50" type="text" name="" placeholder="Enter your name" id="" /><br />
                 <input className="w-50" type="email" name="" id="" placeholder="Enter your Email" />
                 <br />
-                <input className="w-50" type="password" placeholder="Enter password" name="" id="" />
+                <input className="w-50" type="number" placeholder="Enter Your Phone" name="" id="" />
                 <br />
                 <textarea className="w-50" name="" id="" placeholder="Message" cols="30" rows="5"></textarea>
                 <br />

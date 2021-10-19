@@ -19,7 +19,7 @@ const ServiceDetail = () => {
 
     return (
         <div className="container my-5 py-5">
-            <div className="d-flex">
+            <div className="d-sm-block d-md-flex">
                 <img alt="img" variant="top" className="w-25" src={expectDetails?.img} />
                 <div className="ms-3 details_btn">
                     <h2>{expectDetails?.service}</h2>
