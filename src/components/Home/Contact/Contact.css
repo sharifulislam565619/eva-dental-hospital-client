@@ -1,0 +1,20 @@
+#contact {
+  background: linear-gradient(
+    90deg,
+    rgba(248, 88, 88, 0.466),
+    rgba(75, 75, 255, 0.548)
+  );
+}
+textarea {
+  border-radius: 10px;
+  padding: 8px 14px;
+  outline: none;
+  border: none;
+}
+#contact hr {
+  width: 200px;
+  border-top: 6px dotted #000000;
+  margin: auto;
+  background: none;
+  margin-bottom: 40px;
+}

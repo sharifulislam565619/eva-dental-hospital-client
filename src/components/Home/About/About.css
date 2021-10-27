@@ -1,0 +1,23 @@
+.provider-block {
+  width: 320px;
+  height: 340px;
+  text-align: center;
+  display: inline-table;
+  background: #fff;
+  box-shadow: 2px 2px 6px 4px rgb(189 189 189);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.provider-block img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  margin: 15px 0;
+}
