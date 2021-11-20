@@ -20,7 +20,11 @@ const Login = () => {
 
     const history = useHistory()
     const location = useLocation()
+<<<<<<< HEAD
     const url = location?.state?.from || "/"
+=======
+    const url = location?.state?.from
+>>>>>>> 3e797b43feea2a697a32a31d92f95d934ec5d13a
 
 
     const handleEmail = (e) => {
@@ -33,7 +37,11 @@ const Login = () => {
     const handleSignInEmailPassword = (e) => {
         e.preventDefault()
 
+<<<<<<< HEAD
         signInWithEmailPassword(email, password, history, url)
+=======
+        signInWithEmailPassword(email, password)
+>>>>>>> 3e797b43feea2a697a32a31d92f95d934ec5d13a
 
 
 

@@ -34,9 +34,15 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
+<<<<<<< HEAD
             <Route path="/contact">
               <Contact></Contact>
             </Route>
+=======
+            <PrivateRoute path="/contact">
+              <Contact></Contact>
+            </PrivateRoute>
+>>>>>>> 3e797b43feea2a697a32a31d92f95d934ec5d13a
             <Route exact path="*">
               <NotFound></NotFound>
             </Route>

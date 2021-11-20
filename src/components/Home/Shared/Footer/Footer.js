@@ -16,6 +16,10 @@ const Footer = () => {
             <div>
                 <Link to="/">Privacy Policy</Link>
                 <Link to="/">Terms & Conditions</Link>
+<<<<<<< HEAD
+=======
+                <Link to="/">Privacy Policy</Link>
+>>>>>>> 3e797b43feea2a697a32a31d92f95d934ec5d13a
                 <Link to="/">Contact Us</Link>
             </div>
             <h6 className="mt-3"><small>&copy; 2021 By Shariful islam</small></h6>
