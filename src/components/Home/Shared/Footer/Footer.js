@@ -16,7 +16,6 @@ const Footer = () => {
             <div>
                 <Link to="/">Privacy Policy</Link>
                 <Link to="/">Terms & Conditions</Link>
-                <Link to="/">Privacy Policy</Link>
                 <Link to="/">Contact Us</Link>
             </div>
             <h6 className="mt-3"><small>&copy; 2021 By Shariful islam</small></h6>
